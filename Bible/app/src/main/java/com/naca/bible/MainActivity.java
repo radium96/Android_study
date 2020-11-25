@@ -1,0 +1,46 @@
+package com.naca.bible;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.*;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    private TextView TextView_newsnew;
+    private TextView TextView_newsold;
+    private RecyclerView chapter_recycler_view;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager layoutManager;
+    private String[] chapterset = {"창세기", "출애굽기", "레위기", "민수기", "신명기", "여호수아", "사사기", "룻기", "사무엘상", "사무엘하", "열왕기상", "열왕기하"
+                                    , "역대상", "역대하", "에스라", "느헤미야", "에스더", "욥기", "시편", "잠언", "전도서", "아가", "이사야", "예레미야", "예레미야 애가"
+                                    , "에스겔", "다니엘", "호세아", "요엘", "아모스", "오바댜", "요나", "미가", "나훔", "하박국", "스바냐", "학개", "스가랴", "말라기"};
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.news_old);
+
+        chapter_recycler_view = findViewById(R.id.chapter_recycler_view);
+        chapter_recycler_view.setHasFixedSize(true);
+
+        layoutManager = new LinearLayoutManager(this);
+        chapter_recycler_view.setLayoutManager(layoutManager);
+
+        mAdapter = new ChapterAdapter(chapterset);
+        chapter_recycler_view.setAdapter(mAdapter);
+
+        TextView_newsnew = findViewById(R.id.newnews);
+        TextView_newsold = findViewById(R.id.oldnews);
+        TextView_newsnew.setClickable(true);
+        TextView_newsnew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,MainActivity_new.class);
+                startActivity(intent);
+            }
+        });
+    }
+}
