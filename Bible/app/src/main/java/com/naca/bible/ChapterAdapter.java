@@ -9,15 +9,26 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.MyViewHolder> {
-    private String[] mDataset;
+    private static String[] mDataset;
+    private static String item = null;
 
-   public static class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
         public TextView TextView_Chapter;
 
         public MyViewHolder(View v) {
             super(v);
             TextView_Chapter = v.findViewById(R.id.TextView_chatper);
+
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if(position != RecyclerView.NO_POSITION){
+                        item = mDataset[position];
+                    }
+                }
+            });
         }
     }
 
