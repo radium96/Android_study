@@ -16,12 +16,10 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
    public static class MyViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView TextView_verseNum;
         public TextView TextView_verse;
 
         public MyViewHolder(View v) {
             super(v);
-            TextView_verseNum = v.findViewById(R.id.TextView_verseNum);
             TextView_verse = v.findViewById(R.id.TextView_verse);
         }
     }

@@ -5,14 +5,15 @@ import androidx.recyclerview.widget.*;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView TextView_newsnew;
     private TextView TextView_newsold;
-    private RecyclerView chapter_recycler_view;
-    private RecyclerView.Adapter mAdapter;
+    private RecyclerView Bible_recycler_view;
+    private BibleAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private String[] chapterset = {"창세기", "출애굽기", "레위기", "민수기", "신명기", "여호수아", "사사기", "룻기", "사무엘상", "사무엘하", "열왕기상", "열왕기하"
                                     , "역대상", "역대하", "에스라", "느헤미야", "에스더", "욥기", "시편", "잠언", "전도서", "아가", "이사야", "예레미야", "예레미야 애가"
@@ -23,14 +24,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.news_old);
 
-        chapter_recycler_view = findViewById(R.id.chapter_recycler_view);
-        chapter_recycler_view.setHasFixedSize(true);
+        Bible_recycler_view = findViewById(R.id.bible_recycler_view);
+        Bible_recycler_view.setHasFixedSize(true);
 
         layoutManager = new LinearLayoutManager(this);
-        chapter_recycler_view.setLayoutManager(layoutManager);
+        Bible_recycler_view.setLayoutManager(layoutManager);
 
-        mAdapter = new ChapterAdapter(chapterset);
-        chapter_recycler_view.setAdapter(mAdapter);
+        mAdapter = new BibleAdapter(chapterset);
+        mAdapter.setOnItemClickListener(new BibleAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                Log.d("CLICK", Integer.toString(position));
+
+//                Intent intent;
+//                intent = new Intent(MainActivity.this, ChapterActivity_01_01.class);
+//                startActivity(intent);
+            }
+        });
+        Bible_recycler_view.setAdapter(mAdapter);
 
         TextView_newsnew = findViewById(R.id.newnews);
         TextView_newsold = findViewById(R.id.oldnews);

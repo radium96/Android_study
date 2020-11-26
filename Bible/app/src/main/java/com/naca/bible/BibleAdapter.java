@@ -8,8 +8,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.MyViewHolder> {
-    private int[] mDataset;
+class BibleAdapter extends RecyclerView.Adapter<BibleAdapter.MyViewHolder> {
+    private String[] mDataset;
 
     public interface OnItemClickListener {
         void onItemClick(View v, int position);
@@ -44,15 +44,15 @@ class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.MyViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ChapterAdapter(int[] myDataset) {
+    public BibleAdapter(String[] myDataset) {
         mDataset = myDataset;
     }
 
     // Create new views (invoked by the layout manager)
     // RecyclerView에 들어가는 리스트 항목을 불러옴
     @Override
-    public ChapterAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
-                                                          int viewType) {
+    public BibleAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
+                                                        int viewType) {
         // create a new view
         LinearLayout v = (LinearLayout) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.row_bible, parent, false);
@@ -66,6 +66,7 @@ class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.MyViewHolder> {
     public void onBindViewHolder(MyViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
+        holder.TextView_Bible.setText(mDataset[position]);
     }
 
     // Return the size of your dataset (invoked by the layout manager)

@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 public class MainActivity_new extends AppCompatActivity {
     private TextView TextView_newsnew;
     private TextView TextView_newsold;
-    private RecyclerView chapter_recycler_view;
-    private RecyclerView.Adapter mAdapter;
+    private RecyclerView bible_recycler_view;
+    private BibleAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private String[] chapterset = {"마태복음", "마가복음", "누가복음", "요한복음", "사도행전", "로마서", "고린도전서", "고린도후서", "갈라디아서", "에베소서", "빌립보서", "골로새서",
                                    "데살로니가전서", "데살로니가후서", "디모데전서", "디모데후서", "디도서", "빌레몬서", "히브리서", "야고보서", "베드로전서", "베드로후서", "요한1서",
@@ -24,14 +24,20 @@ public class MainActivity_new extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.news_new);
 
-        chapter_recycler_view = findViewById(R.id.chapter_recycler_view);
-        chapter_recycler_view.setHasFixedSize(true);
+        bible_recycler_view = findViewById(R.id.bible_recycler_view);
+        bible_recycler_view.setHasFixedSize(true);
 
         layoutManager = new LinearLayoutManager(this);
-        chapter_recycler_view.setLayoutManager(layoutManager);
+        bible_recycler_view.setLayoutManager(layoutManager);
 
-        mAdapter = new ChapterAdapter(chapterset);
-        chapter_recycler_view.setAdapter(mAdapter);
+        mAdapter = new BibleAdapter(chapterset);
+        mAdapter.setOnItemClickListener(new BibleAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                Intent intent = new Intent(MainActivity_new.this , null);
+            }
+        });
+        bible_recycler_view.setAdapter(mAdapter);
 
         TextView_newsnew = findViewById(R.id.newnews);
         TextView_newsold = findViewById(R.id.oldnews);

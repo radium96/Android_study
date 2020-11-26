@@ -19,6 +19,9 @@
 
         <activity android:name=".MainActivity_new">
         </activity>
+
+        <activity android:name=".ChapterActivity_01_01">
+        </activity>
     </application>
 
 </manifest>
