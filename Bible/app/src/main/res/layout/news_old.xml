@@ -21,7 +21,7 @@
             android:gravity="center"
             android:enabled="false"
             android:clickable="true"
-            android:background="@drawable/btn_chapter"/>
+            android:background="@drawable/btn_bible"/>
 
         <View
             android:layout_width="2dp"
@@ -39,7 +39,8 @@
             android:gravity="center"
             android:enabled="true"
             android:clickable="true"
-            android:background="@drawable/btn_chapter"/>
+            android:background="@drawable/btn_bible"
+            android:focusable="true" />
 
     </LinearLayout>
 

@@ -20,8 +20,12 @@
         <activity android:name=".MainActivity_new">
         </activity>
 
-        <activity android:name=".ChapterActivity_01_01">
+        <activity android:name=".ChapterActivity_01">
         </activity>
+
+        <activity android:name=".ChapterActivity_02">
+        </activity>
+
     </application>
 
 </manifest>

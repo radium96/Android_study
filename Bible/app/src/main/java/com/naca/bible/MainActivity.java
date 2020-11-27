@@ -36,9 +36,11 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(View v, int position) {
                 Log.d("CLICK", Integer.toString(position));
 
-//                Intent intent;
-//                intent = new Intent(MainActivity.this, ChapterActivity_01_01.class);
-//                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, ChapterActivity_01.class);;
+                intent.putExtra("chapter", position);
+                intent.putExtra("chapterName", chapterset[position]);
+
+                startActivity(intent);
             }
         });
         Bible_recycler_view.setAdapter(mAdapter);

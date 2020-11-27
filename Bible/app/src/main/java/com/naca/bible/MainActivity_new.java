@@ -2,6 +2,7 @@ package com.naca.bible;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -34,7 +35,13 @@ public class MainActivity_new extends AppCompatActivity {
         mAdapter.setOnItemClickListener(new BibleAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View v, int position) {
-                Intent intent = new Intent(MainActivity_new.this , null);
+                Log.d("CLICK", Integer.toString(position));
+
+                Intent intent = new Intent(MainActivity_new.this, ChapterActivity_02.class);;
+                intent.putExtra("chapter", position);
+                intent.putExtra("chapterName", chapterset[position]);
+
+                startActivity(intent);
             }
         });
         bible_recycler_view.setAdapter(mAdapter);

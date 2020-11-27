@@ -11,35 +11,35 @@ import androidx.recyclerview.widget.RecyclerView;
 class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.MyViewHolder> {
     private int[] mDataset;
 
-    public interface OnItemClickListener {
-        void onItemClick(View v, int position);
-    }
-
-    private OnItemClickListener mListener = null;
-
-    public void setOnItemClickListener(OnItemClickListener listener){
-        this.mListener = listener;
-    }
+//    public interface OnItemClickListener {
+//        void onItemClick(View v, int position);
+//    }
+//
+//    private OnItemClickListener mListener = null;
+//
+//    public void setOnItemClickListener(OnItemClickListener listener){
+//        this.mListener = listener;
+//    }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView TextView_Bible;
+        public TextView TextView_chapter;
 
         public MyViewHolder(View v) {
             super(v);
-            TextView_Bible = v.findViewById(R.id.TextView_bible);
+            TextView_chapter = v.findViewById(R.id.TextView_chapter);
 
-            v.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int position = getAdapterPosition();
-                    if(position != RecyclerView.NO_POSITION){
-                        if (mListener != null){
-                            mListener.onItemClick(v, position);
-                        }
-                    }
-                }
-            });
+//            v.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    int position = getAdapterPosition();
+//                    if(position != RecyclerView.NO_POSITION){
+//                        if (mListener != null){
+//                            mListener.onItemClick(v, position);
+//                        }
+//                    }
+//                }
+//            });
         }
     }
 
@@ -55,7 +55,7 @@ class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.MyViewHolder> {
                                                           int viewType) {
         // create a new view
         LinearLayout v = (LinearLayout) LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.row_bible, parent, false);
+                .inflate(R.layout.element_chapter, parent, false);
 
         MyViewHolder vh = new MyViewHolder(v);
         return vh;
@@ -64,8 +64,7 @@ class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.MyViewHolder> {
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
+        holder.TextView_chapter.setText(Integer.toString(mDataset[position]));
     }
 
     // Return the size of your dataset (invoked by the layout manager)
