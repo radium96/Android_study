@@ -46,8 +46,8 @@ public class MainActivity_new extends AppCompatActivity {
         });
         bible_recycler_view.setAdapter(mAdapter);
 
-        TextView_newsnew = findViewById(R.id.newnews);
-        TextView_newsold = findViewById(R.id.oldnews);
+//        TextView_newsnew = findViewById(R.id.newnews);
+//        TextView_newsold = findViewById(R.id.oldnews);
         TextView_newsold.setClickable(true);
         TextView_newsold.setOnClickListener(new View.OnClickListener() {
             @Override

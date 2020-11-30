@@ -10,8 +10,6 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView TextView_newsnew;
-    private TextView TextView_newsold;
     private RecyclerView Bible_recycler_view;
     private BibleAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -44,16 +42,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         Bible_recycler_view.setAdapter(mAdapter);
-
-        TextView_newsnew = findViewById(R.id.newnews);
-        TextView_newsold = findViewById(R.id.oldnews);
-        TextView_newsnew.setClickable(true);
-        TextView_newsnew.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,MainActivity_new.class);
-                startActivity(intent);
-            }
-        });
     }
 }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/bible_old"
+            android:layout_width="1dp"
+            android:layout_height="100dp"
+            android:layout_weight="0.5"
+            android:text="구약"
+            android:textSize="50dp"
+            android:textColor="@color/black"
+            android:background="@drawable/btn_bible"
+            android:onClick="clickhander"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/black"/>
+
+        <Button
+            android:id="@+id/bible_new"
+            android:layout_width="1dp"
+            android:layout_height="100dp"
+            android:layout_weight="0.5"
+            android:text="신약"
+            android:textSize="50dp"
+            android:textColor="@color/black"
+            android:background="@drawable/btn_bible"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</LinearLayout>
