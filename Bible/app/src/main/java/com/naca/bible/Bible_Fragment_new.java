@@ -1,6 +1,8 @@
 package com.naca.bible;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +34,18 @@ public class Bible_Fragment_new extends Fragment {
         Bible_recycler_view.scrollToPosition(0);
 
         mAdapter = new BibleAdapter(chapterset);
+        mAdapter.setOnItemClickListener(new BibleAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                Log.d("CLICK", Integer.toString(position));
+
+                Intent intent = new Intent(getContext(), ChapterActivity_02.class);;
+                intent.putExtra("chapter", position);
+                intent.putExtra("chapterName", chapterset[position]);
+
+                startActivity(intent);
+            }
+        });
         Bible_recycler_view.setAdapter(mAdapter);
 
         return view;

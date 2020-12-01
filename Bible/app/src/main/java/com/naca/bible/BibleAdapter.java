@@ -3,9 +3,11 @@ package com.naca.bible;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 class BibleAdapter extends RecyclerView.Adapter<BibleAdapter.MyViewHolder> {
@@ -15,7 +17,7 @@ class BibleAdapter extends RecyclerView.Adapter<BibleAdapter.MyViewHolder> {
         void onItemClick(View v, int position);
     }
 
-    private OnItemClickListener mListener = null;
+    public static OnItemClickListener mListener = null;
 
     public void setOnItemClickListener(OnItemClickListener listener){
         this.mListener = listener;
@@ -23,19 +25,17 @@ class BibleAdapter extends RecyclerView.Adapter<BibleAdapter.MyViewHolder> {
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView TextView_Bible;
+        public TextView textview_bible = itemView.findViewById(R.id.textView_bible);
 
-        public MyViewHolder(View v) {
-            super(v);
-            TextView_Bible = v.findViewById(R.id.TextView_bible);
-
-            v.setOnClickListener(new View.OnClickListener() {
+        public MyViewHolder(@NonNull final View itemView) {
+            super(itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int position = getAdapterPosition();
                     if(position != RecyclerView.NO_POSITION){
-                        if (mListener != null){
-                            mListener.onItemClick(v, position);
+                        if (BibleAdapter.mListener != null){
+                            BibleAdapter.mListener.onItemClick(v, position);
                         }
                     }
                 }
@@ -66,7 +66,7 @@ class BibleAdapter extends RecyclerView.Adapter<BibleAdapter.MyViewHolder> {
     public void onBindViewHolder(MyViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.TextView_Bible.setText(mDataset[position]);
+        holder.textview_bible.setText(mDataset[position]);
     }
 
     // Return the size of your dataset (invoked by the layout manager)

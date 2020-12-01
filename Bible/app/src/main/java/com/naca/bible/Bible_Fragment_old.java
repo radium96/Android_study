@@ -32,9 +32,20 @@ public class Bible_Fragment_old extends Fragment {
 
         layoutManager = new LinearLayoutManager(getActivity());
         Bible_recycler_view.setLayoutManager(layoutManager);
-        Bible_recycler_view.scrollToPosition(0);
 
         mAdapter = new BibleAdapter(chapterset);
+        mAdapter.setOnItemClickListener(new BibleAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                Log.d("CLICK", Integer.toString(position));
+
+                Intent intent = new Intent(getContext(), ChapterActivity_01.class);;
+                intent.putExtra("chapter", position);
+                intent.putExtra("chapterName", chapterset[position]);
+
+                startActivity(intent);
+            }
+        });
         Bible_recycler_view.setAdapter(mAdapter);
 
         return view;

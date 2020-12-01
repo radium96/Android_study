@@ -1,12 +1,19 @@
 package com.naca.bible;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Bible_Main extends AppCompatActivity {
 
@@ -45,7 +52,6 @@ public class Bible_Main extends AppCompatActivity {
                 clickhandler(v);
             }
         });
-
     }
 
     public void clickhandler(View View){
