@@ -24,11 +24,11 @@ class BibleAdapter extends RecyclerView.Adapter<BibleAdapter.MyViewHolder> {
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
         public TextView textview_bible = itemView.findViewById(R.id.textView_bible);
 
         public MyViewHolder(@NonNull final View itemView) {
             super(itemView);
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

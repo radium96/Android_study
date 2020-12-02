@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/textview_verse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:text="verseverseverseverseverseverseverseverseverseverseverseverseverseverseverseverse"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:padding="5dp"/>
 
-        <TextView
-            android:id="@+id/TextView_verse"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="verseverseverseverseverseverseverseverseverseverseverseverseverseverseverseverse"
-            android:textSize="20dp"/>
-
-    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
 
 </LinearLayout>

@@ -16,9 +16,10 @@
         android:textSize="30dp"
         android:textColor="@color/black"
         android:background="#8F8F59"/>
+
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:background="@color/black"/>
 
     <androidx.recyclerview.widget.RecyclerView

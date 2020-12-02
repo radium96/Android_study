@@ -2,10 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="wrap_content"
     android:layout_width="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:clickable="true">
 
     <TextView
-        android:id="@+id/TextView_chapter"
+        android:id="@+id/textView_chapter"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:text="text"
@@ -13,7 +14,6 @@
         android:textSize="20dp"
         android:gravity="center"
         android:background="#AFAF5B"
-        android:clickable="true"
         android:layout_margin="4dp"
         android:focusable="true" />
 

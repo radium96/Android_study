@@ -20,10 +20,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ChapterActivity_01">
+        <activity android:name=".ChapterActivity">
         </activity>
 
-        <activity android:name=".ChapterActivity_02">
+        <activity android:name=".Verse_Main">
         </activity>
 
     </application>

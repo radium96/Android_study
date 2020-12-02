@@ -6,40 +6,37 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.MyViewHolder> {
     private int[] mDataset;
 
-//    public interface OnItemClickListener {
-//        void onItemClick(View v, int position);
-//    }
-//
-//    private OnItemClickListener mListener = null;
-//
-//    public void setOnItemClickListener(OnItemClickListener listener){
-//        this.mListener = listener;
-//    }
+    public interface OnItemClickListener {
+        void onItemClick(View v, int position);
+    }
+
+    public static OnItemClickListener mListener = null;
+
+    public void setOnItemClickListener(OnItemClickListener listener) { this.mListener = listener; }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
-        public TextView TextView_chapter;
+        public TextView textView_chapter = itemView.findViewById(R.id.textView_chapter);
 
-        public MyViewHolder(View v) {
-            super(v);
-            TextView_chapter = v.findViewById(R.id.TextView_chapter);
+        public MyViewHolder(@NonNull final View itemView) {
+            super(itemView);
 
-//            v.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    int position = getAdapterPosition();
-//                    if(position != RecyclerView.NO_POSITION){
-//                        if (mListener != null){
-//                            mListener.onItemClick(v, position);
-//                        }
-//                    }
-//                }
-//            });
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if(position != RecyclerView.NO_POSITION){
+                        if (ChapterAdapter.mListener != null){
+                            ChapterAdapter.mListener.onItemClick(v, position);
+                        }
+                    }
+                }
+            });
         }
     }
 
@@ -64,7 +61,7 @@ class ChapterAdapter extends RecyclerView.Adapter<ChapterAdapter.MyViewHolder> {
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.TextView_chapter.setText(Integer.toString(mDataset[position]));
+        holder.textView_chapter.setText(Integer.toString(mDataset[position]));
     }
 
     // Return the size of your dataset (invoked by the layout manager)
