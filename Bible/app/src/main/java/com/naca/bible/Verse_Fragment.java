@@ -49,6 +49,8 @@ public class Verse_Fragment extends Fragment {
 
         BufferedReader br;
 
+        verse.clear();
+
         try {
             versearr = am.list(path);
             path = path + "/" + versearr[chapter];

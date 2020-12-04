@@ -81,6 +81,7 @@ public class ChapterActivity extends AppCompatActivity {
                 intent.putExtra("path", path);
                 intent.putExtra("verse", position);
                 intent.putExtra("chapter", chapters[pos]);
+                intent.putExtra("numVerse", chapter.length);
                 startActivity(intent);
             }
         });
