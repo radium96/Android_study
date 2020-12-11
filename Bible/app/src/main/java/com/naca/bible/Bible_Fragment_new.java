@@ -33,7 +33,6 @@ public class Bible_Fragment_new extends Fragment {
         View view = inflater.inflate(R.layout.news_new, container, false);
 
         AssetManager am = getResources().getAssets();
-        InputStream is = null;
 
         try {
             chapterset = am.list("new");

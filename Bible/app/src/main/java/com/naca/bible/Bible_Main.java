@@ -6,8 +6,12 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.naca.bible.databinding.BibleMainBinding;
+import com.naca.bible.ui.viewModel.BibleViewModel;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -16,6 +20,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Bible_Main extends AppCompatActivity {
+
+    private BibleMainBinding binding;
 
     private FragmentManager fragmentManager;
     private Bible_Fragment_old fragment_old;
@@ -27,7 +33,8 @@ public class Bible_Main extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bible_main);
+        binding = DataBindingUtil.setContentView(this, R.layout.bible_main);
+        binding.setViewmodel(new BibleViewModel());
 
         fragmentManager = getSupportFragmentManager();
 
