@@ -13,6 +13,8 @@ public class BibleListItemViewModel extends ViewModel {
         return chapter;
     }
 
+
+
     public void onClick(){
 
 

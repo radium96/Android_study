@@ -1,7 +1,5 @@
 package com.naca.bible.ui.viewModel;
 
-import android.content.res.AssetManager;
-
 import androidx.databinding.ObservableArrayList;
 import androidx.lifecycle.ViewModel;
 
