@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.BindingAdapter;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -52,7 +53,6 @@ public class Bible_Fragment_old extends Fragment {
         }
 
 
-
         Bible_recycler_view = (RecyclerView) view.findViewById(R.id.bible_recycler_view);
         Bible_recycler_view.setHasFixedSize(true);
 
@@ -74,5 +74,13 @@ public class Bible_Fragment_old extends Fragment {
 
         return view;
     }
+
+    @BindingAdapter("chapterList")
+    public static void setItems(RecyclerView recyclerView, String[] chapterset){
+        BibleListViewAdapter adapter = (BibleListViewAdapter) recyclerView.getAdapter();
+
+    }
+
+
 
 }
