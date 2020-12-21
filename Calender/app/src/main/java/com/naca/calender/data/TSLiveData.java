@@ -2,12 +2,12 @@ package com.naca.calender.data;
 
 import androidx.lifecycle.MutableLiveData;
 
-public class NLiveData<T> extends MutableLiveData<T> {
+public class TSLiveData<T> extends MutableLiveData<T> {
 
-    public NLiveData(){
+    public TSLiveData(){
     }
 
-    public NLiveData(T value){
+    public TSLiveData(T value){
         setValue(value);
     }
 }
