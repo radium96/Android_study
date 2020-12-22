@@ -1,9 +1,8 @@
 package com.naca.calender.ui.viewmodel;
 
-import androidx.core.util.ObjectsCompat;
 import androidx.lifecycle.ViewModel;
 
-import com.naca.calender.data.NLiveData;
+import com.naca.calender.data.TSLiveData;
 import com.naca.calender.util.DateFormat;
 import com.naca.calender.util.Keys;
 
@@ -11,11 +10,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class CalenderListViewModel extends ViewModel {
+public class CalendarListViewModel extends ViewModel {
     private long mCurrentTime;
 
-    public NLiveData<String> mTitle = new NLiveData<>();
-    public NLiveData<ArrayList<Object>> mCalenderList = new NLiveData<>(new ArrayList<>());
+    public TSLiveData<String> mTitle = new TSLiveData<>();
+    public TSLiveData<ArrayList<Object>> mCalenderList = new TSLiveData<>(new ArrayList<>());
 
     public int mCenterPosition;
 
@@ -47,7 +46,7 @@ public class CalenderListViewModel extends ViewModel {
         ArrayList<Object> calendarList = new ArrayList<>();
         for(int i = -300; i<300;i++){
             try{
-                GregorianCalendar calendar = new GregorianCalendar(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH)+1, 1, 0, 0, 0);
+                GregorianCalendar calendar = new GregorianCalendar(cal.get(Calendar.YEAR), cal.get(Calendar.MONTH)+i, 1, 0, 0, 0);
                 if(i == 0){
                     mCenterPosition = calendarList.size();
                 }
@@ -67,7 +66,7 @@ public class CalenderListViewModel extends ViewModel {
                 e.printStackTrace();
             }
         }
-
+        mCalenderList.setValue(calendarList);
 
 
     }
