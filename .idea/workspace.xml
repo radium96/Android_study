@@ -1,17 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fce1b246-8bf8-4c62-af27-e4c38e08b47e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Calender/app/src/main/java/com/naca/calender/ui/adapter/CalendarAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calender/app/src/main/java/com/naca/calender/ui/viewmodel/CalendarViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calender/app/src/main/java/com/naca/calender/ui/viewmodel/CalenderHeaderViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calender/app/src/main/java/com/naca/calender/ui/viewmodel/EmptyViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calender/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Calender/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calender/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Calender/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calender/app/src/main/java/com/naca/calender/data/NLiveData.java" beforeDir="false" afterPath="$PROJECT_DIR$/Calender/app/src/main/java/com/naca/calender/data/TSLiveData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calender/app/src/main/res/layout/item_day.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Calender/app/src/main/res/layout/item_day.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calender/app/src/main/res/layout/item_day_empty.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Calender/app/src/main/res/layout/item_day_empty.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calender/app/src/main/res/layout/item_header.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Calender/app/src/main/res/layout/item_header.xml" afterDir="false" />
+    <list default="true" id="c8e6c801-f17e-49f2-a9e8-a721acddd9c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/androidTest/java/com/example/maplecrystalcalcualtor/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/java/com/example/maplecrystalcalcualtor/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/java/com/example/maplecrystalcalcualtor/data/TSLiveData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/drawable/view_charactor_summary.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/layout/calculator_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/app/src/test/java/com/example/maplecrystalcalcualtor/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MapleCrystalCalcualtor/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Android_study.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +76,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1lxMtVOZvUbMdyb9kSUF4pZZKyt" />
+  <component name="ProjectId" id="1mK6xxxQ8HvFBxVRNs1DStqO3QE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,25 +87,36 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Calender" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fce1b246-8bf8-4c62-af27-e4c38e08b47e" name="Default Changelist" comment="" />
-      <created>1608534503036</created>
+      <changelist id="c8e6c801-f17e-49f2-a9e8-a721acddd9c6" name="Default Changelist" comment="" />
+      <created>1609230185714</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1608534503036</updated>
+      <updated>1609230185714</updated>
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1608549792574">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1609230214804">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1608549792574" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1609230214804" />
   </component>
 </project>
