@@ -1,4 +1,13 @@
 package com.example.maplecrystalcalcualtor.data;
 
-public class TSLiveData {
+import androidx.lifecycle.MutableLiveData;
+
+public class TSLiveData<T> extends MutableLiveData {
+    public TSLiveData(){
+
+    }
+
+    public TSLiveData(T value) {
+        setValue(value);
+    }
 }

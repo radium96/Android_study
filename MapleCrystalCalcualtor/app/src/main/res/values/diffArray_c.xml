@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="diff_c">
+        <item>난이도 선택</item>
+        <item>노멀</item>
+        <item>하드</item>
+    </string-array>
+</resources>

@@ -2,6 +2,7 @@ package com.example.maplecrystalcalcualtor.ui.adapter;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,6 +19,7 @@ public class BossListAdapter extends RecyclerView.Adapter<BossListAdapter.MyView
     @NonNull
     @Override
     public BossListAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         return null;
     }
 

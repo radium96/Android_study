@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="count_b">
+        <item>0회</item>
+        <item>1회</item>
+        <item>2회</item>
+    </string-array>
+</resources>
