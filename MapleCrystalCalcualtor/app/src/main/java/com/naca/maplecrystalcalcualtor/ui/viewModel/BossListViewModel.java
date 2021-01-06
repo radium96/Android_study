@@ -1,8 +1,10 @@
-package com.example.maplecrystalcalcualtor.ui.viewModel;
+package com.naca.maplecrystalcalcualtor.ui.viewModel;
+
+import android.app.AlertDialog;
 
 import androidx.lifecycle.ViewModel;
 
-import com.example.maplecrystalcalcualtor.data.TSLiveData;
+import com.naca.maplecrystalcalcualtor.data.TSLiveData;
 
 public class BossListViewModel extends ViewModel {
 
@@ -22,6 +24,7 @@ public class BossListViewModel extends ViewModel {
 
     }
 
+
     public void setCountArray(int position){
 
     }
@@ -29,4 +32,5 @@ public class BossListViewModel extends ViewModel {
     public void setDiffArray(int position){
 
     }
+
 }

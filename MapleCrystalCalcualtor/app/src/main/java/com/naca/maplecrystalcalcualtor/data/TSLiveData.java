@@ -1,4 +1,4 @@
-package com.example.maplecrystalcalcualtor.data;
+package com.naca.maplecrystalcalcualtor.data;
 
 import androidx.lifecycle.MutableLiveData;
 

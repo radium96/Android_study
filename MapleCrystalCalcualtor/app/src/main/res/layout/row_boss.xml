@@ -5,7 +5,7 @@
     <data class="BossRowBinding">
         <variable
             name="model"
-            type="com.example.maplecrystalcalcualtor.ui.viewModel.BossListViewModel" />
+            type="com.naca.maplecrystalcalcualtor.ui.viewModel.BossListViewModel" />
     </data>
 
     <LinearLayout
@@ -22,14 +22,12 @@
             <ImageView
                 android:layout_width="108dp"
                 android:layout_height="108dp"
-                android:src="@drawable/Banban"
+                android:src="@drawable/ic_launcher_background"
                 android:padding="10dp"
                 android:layout_weight="0"/>
 
             <View
                 android:layout_width="1dp"
-
-
                 android:layout_height="match_parent"
                 android:background="@color/line"/>
 
@@ -44,7 +42,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="name"
+                    android:text="이름"
                     android:textColor="@color/black"
                     android:textSize="20dp"
                     android:gravity="center"/>
@@ -54,12 +52,13 @@
                     android:layout_height="1dp"
                     android:background="@color/line"/>
 
-                <Spinner
+                <Button
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:entries="@array/people_num"
                     android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:text="인원수"
                     android:textSize="20dp"
                     android:gravity="center"/>
 
@@ -77,12 +76,13 @@
                 android:layout_weight="1"
                 android:weightSum="2">
 
-                <Spinner
+                <Button
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="difficulty"
                     android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:text="난이도"
                     android:textSize="20dp"
                     android:gravity="center"/>
 
@@ -91,12 +91,13 @@
                     android:layout_height="1dp"
                     android:background="@color/line"/>
 
-                <Spinner
+                <Button
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="count"
                     android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:text="횟수"
                     android:textSize="20dp"
                     android:gravity="center"/>
 
