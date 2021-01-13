@@ -1,10 +1,8 @@
-package com.naca.maplecrystalcalcualtor.ui.viewModel;
-
-import android.app.AlertDialog;
+package com.naca.maplecrystalcalculator.ui.viewModel;
 
 import androidx.lifecycle.ViewModel;
 
-import com.naca.maplecrystalcalcualtor.data.TSLiveData;
+import com.naca.maplecrystalcalculator.data.TSLiveData;
 
 public class BossListViewModel extends ViewModel {
 

@@ -1,4 +1,4 @@
-package com.naca.maplecrystalcalcualtor.ui.adapter;
+package com.naca.maplecrystalcalculator.ui.adapter;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -7,9 +7,9 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.naca.maplecrystalcalcualtor.R;
-import com.naca.maplecrystalcalcualtor.databinding.BossRowBinding;
-import com.naca.maplecrystalcalcualtor.ui.viewModel.BossListViewModel;
+import com.naca.maplecrystalcalculator.R;
+import com.naca.maplecrystalcalculator.databinding.BossRowBinding;
+import com.naca.maplecrystalcalculator.ui.viewModel.BossListViewModel;
 
 public class BossListAdapter extends RecyclerView.Adapter<BossListAdapter.BossRowHolder> {
 
@@ -18,6 +18,9 @@ public class BossListAdapter extends RecyclerView.Adapter<BossListAdapter.BossRo
 
         public BossRowHolder(@NonNull BossRowBinding binding) {
             super(binding.getRoot());
+
+
+
             this.binding = binding;
         }
 

@@ -5,7 +5,7 @@
     <data class="BossRowBinding">
         <variable
             name="model"
-            type="com.naca.maplecrystalcalcualtor.ui.viewModel.BossListViewModel" />
+            type="com.naca.maplecrystalcalculator.ui.viewModel.BossListViewModel" />
     </data>
 
     <LinearLayout

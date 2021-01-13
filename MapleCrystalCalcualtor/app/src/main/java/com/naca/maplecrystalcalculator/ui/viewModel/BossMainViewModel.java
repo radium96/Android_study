@@ -1,4 +1,4 @@
-package com.naca.maplecrystalcalcualtor.ui.viewModel;
+package com.naca.maplecrystalcalculator.ui.viewModel;
 
 import androidx.lifecycle.ViewModel;
 

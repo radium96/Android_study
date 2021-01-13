@@ -1,5 +1,6 @@
 package com.naca.bible;
 
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;

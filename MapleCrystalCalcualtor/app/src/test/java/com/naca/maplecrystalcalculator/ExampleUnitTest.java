@@ -1,4 +1,4 @@
-package com.naca.maplecrystalcalcualtor;
+package com.naca.maplecrystalcalculator;
 
 import org.junit.Test;
 
