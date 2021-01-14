@@ -10,25 +10,4 @@ public class BossListViewModel extends ViewModel {
     public TSLiveData<String> difficulty = new TSLiveData<>();
     public TSLiveData<Integer> count = new TSLiveData<>();
 
-    public void setPeopleNum(int peopleNum) {
-
-    }
-
-    public void setDifficulty(String difficulty) {
-
-    }
-
-    public void setCount(int count) {
-
-    }
-
-
-    public void setCountArray(int position){
-
-    }
-
-    public void setDiffArray(int position){
-
-    }
-
 }
