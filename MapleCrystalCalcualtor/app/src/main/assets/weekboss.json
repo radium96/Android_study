@@ -1,0 +1,112 @@
+{
+  "boss": [
+    {
+      "image" : "zakum.png",
+      "name": "자쿰",
+      "difficulty": ["선택", "카오스"],
+      "count": ["0", "1"]
+    },
+    {
+      "image" : "magnus.png",
+      "name": "매그너스",
+      "difficulty": ["선택", "하드"],
+      "count": ["0", "1", "2"]
+    },
+    {
+      "image" : "hilla.png",
+      "name": "힐라",
+      "difficulty": ["선택", "하드"],
+      "count": ["0", "1"]
+    },
+    {
+      "image" : "papulatus.png",
+      "name": "파풀라투스",
+      "difficulty": ["선택", "카오스"],
+      "count": ["0", "1"]
+    },
+    {
+      "image" : "pierre.png",
+      "name": "피에르",
+      "difficulty": ["선택", "카오스"],
+      "count": ["0", "1", "2"]
+    },
+    {
+      "image" : "banban.png",
+      "name": "반반",
+      "difficulty": ["선택", "카오스"],
+      "count": ["0", "1", "2"]
+    },
+    {
+      "image" : "bloodyqueen.png",
+      "name": "블러디퀸",
+      "difficulty": ["선택", "카오스"],
+      "count": ["0", "1", "2"]
+    },
+    {
+      "image" : "vellum.png",
+      "name": "벨룸",
+      "difficulty": ["선택", "카오스"],
+      "count": ["0", "1", "2"]
+    },
+    {
+      "image" : "pinkbean.png",
+      "name": "핑크빈",
+      "difficulty": ["선택", "카오스"],
+      "count": ["0", "1"]
+    },
+    {
+      "image" : "cygnus.png",
+      "name": "시그너스",
+      "difficulty": ["선택", "이지", "하드"],
+      "count": ["0", "1", "2"]
+    },
+    {
+      "image" : "swoo.png",
+      "name": "스우",
+      "difficulty": ["선택", "노말", "하드"],
+      "count": ["0", "1"]
+    },
+    {
+      "image" : "demien.png",
+      "name": "데미안",
+      "difficulty": ["선택", "노말", "하드"],
+      "count": ["0", "1"]
+    },
+    {
+      "image" : "lucid.png",
+      "name": "루시드",
+      "difficulty": ["선택", "이지", "노말", "하드"],
+      "count": ["0", "1"]
+    },
+    {
+      "image" : "will.png",
+      "name": "윌",
+      "difficulty": ["선택", "노말", "하드"],
+      "count": ["0", "1"]
+    },
+    {
+      "image" : "dusk.png",
+      "name": "더스크",
+      "difficulty": ["선택", "노말", "카오스"],
+      "count": ["0", "1"]
+    },
+    {
+      "image" : "djunkel.png",
+      "name": "듄켈",
+      "difficulty": ["선택", "노말", "하드"],
+      "count": ["0", "1"]
+    },
+    {
+      "image" : "jinhilla.png",
+      "name": "진힐라",
+      "difficulty": ["선택", "하드"],
+      "count": ["0", "1"]
+    },
+    {
+      "image" : "blackmage.png",
+      "name": "검은 마법사",
+      "difficulty": ["선택", "하드"],
+      "count": ["0", "1"]
+    }
+  ]
+}
