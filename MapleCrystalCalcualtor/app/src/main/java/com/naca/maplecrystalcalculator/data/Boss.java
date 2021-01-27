@@ -16,6 +16,15 @@ public class Boss {
     private ArrayList<String> difficulty;
     private ArrayList<Integer> count;
 
+    public Boss(){
+    }
+
+    public Boss(String bossName, ArrayList<String> difficulty, ArrayList<Integer> count){
+        this.bossName = bossName;
+        this.difficulty = difficulty;
+        this.count = count;
+    }
+
     public ImageView getImage() {
         return image;
     }

@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.naca.maplecrystalcalculator.R;
+import com.naca.maplecrystalcalculator.data.Boss;
 import com.naca.maplecrystalcalculator.databinding.BossRowBinding;
 import com.naca.maplecrystalcalculator.ui.viewModel.BossListViewModel;
 
@@ -19,6 +20,8 @@ import java.io.InputStream;
 import java.util.*;
 
 public class BossListAdapter extends RecyclerView.Adapter<BossListAdapter.BossRowHolder> {
+
+    private List<Boss> boss;
 
     private Context mContext;
 
@@ -86,6 +89,8 @@ public class BossListAdapter extends RecyclerView.Adapter<BossListAdapter.BossRo
     public void onBindViewHolder(@NonNull BossRowHolder holder, int position) {
 
         BossListViewModel model = new BossListViewModel(mContext);
+        
+
         holder.setViewModel(model);
     }
 

@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data class="BossRecyclerBinding">
+    <data class="BossMainBinding">
         <import type="androidx.databinding.ObservableArrayList"/>
-        <import type="com.naca.maplecrystalcalculator.data.Boss"/>
-
+        <import type="com.naca.myapplication.Boss"/>
+        
         <variable
             name="bossList"
             type="ObservableArrayList&lt;Boss&gt;" />
+        
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/white">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/bosslistrecyclerview"
+            android:id="@+id/recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:item="@{Boss}">
+            tools:item="@{bossList}">
 
         </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
-
 
 </layout>

@@ -1,0 +1,139 @@
+Index: MapleCrystalCalcualtor/app/src/main/java/com/naca/maplecrystalcalculator/ui/fragment/Boss_Fragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- MapleCrystalCalcualtor/app/src/main/java/com/naca/maplecrystalcalculator/ui/fragment/Boss_Fragment.java	(revision 82cba13708632da0a0c38d6c0862ff7413b5248c)
++++ MapleCrystalCalcualtor/app/src/main/java/com/naca/maplecrystalcalculator/ui/fragment/Boss_Fragment.java	(date 1610613173261)
+@@ -9,6 +9,8 @@
+ import androidx.annotation.Nullable;
+ import androidx.databinding.DataBindingUtil;
+ import androidx.fragment.app.Fragment;
++import androidx.fragment.app.FragmentManager;
++import androidx.fragment.app.FragmentTransaction;
+ 
+ import com.naca.maplecrystalcalculator.R;
+ import com.naca.maplecrystalcalculator.databinding.CalculatorBinding;
+@@ -16,6 +18,9 @@
+ public class Boss_Fragment extends Fragment {
+ 
+     private CalculatorBinding binding;
++    private FragmentManager fragmentManager;
++    private BossList_Fragment fragment;
++    private FragmentTransaction transaction;
+ 
+     @Nullable
+     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+@@ -23,7 +28,12 @@
+         binding = DataBindingUtil.inflate(inflater, R.layout.calculator_fragment, container, false);
+         View root = binding.getRoot();
+ 
++        fragmentManager = getChildFragmentManager();
+ 
++        fragment = new BossList_Fragment();
++
++        transaction = fragmentManager.beginTransaction();
++        transaction.replace(binding.frame.getId(), fragment).commitAllowingStateLoss();
+ 
+         return root;
+     }
+Index: MapleCrystalCalcualtor/app/src/main/java/com/naca/maplecrystalcalculator/ui/viewModel/BossListViewModel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- MapleCrystalCalcualtor/app/src/main/java/com/naca/maplecrystalcalculator/ui/viewModel/BossListViewModel.java	(revision 82cba13708632da0a0c38d6c0862ff7413b5248c)
++++ MapleCrystalCalcualtor/app/src/main/java/com/naca/maplecrystalcalculator/ui/viewModel/BossListViewModel.java	(date 1610624753427)
+@@ -10,25 +10,4 @@
+     public TSLiveData<String> difficulty = new TSLiveData<>();
+     public TSLiveData<Integer> count = new TSLiveData<>();
+ 
+-    public void setPeopleNum(int peopleNum) {
+-
+-    }
+-
+-    public void setDifficulty(String difficulty) {
+-
+-    }
+-
+-    public void setCount(int count) {
+-
+-    }
+-
+-
+-    public void setCountArray(int position){
+-
+-    }
+-
+-    public void setDiffArray(int position){
+-
+-    }
+-
+ }
+Index: MapleCrystalCalcualtor/app/src/main/java/com/naca/maplecrystalcalculator/ui/fragment/BossList_Fragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- MapleCrystalCalcualtor/app/src/main/java/com/naca/maplecrystalcalculator/ui/fragment/BossList_Fragment.java	(date 1610618311376)
++++ MapleCrystalCalcualtor/app/src/main/java/com/naca/maplecrystalcalculator/ui/fragment/BossList_Fragment.java	(date 1610618311376)
+@@ -0,0 +1,30 @@
++package com.naca.maplecrystalcalculator.ui.fragment;
++
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
++import androidx.annotation.NonNull;
++import androidx.annotation.Nullable;
++import androidx.databinding.DataBindingUtil;
++import androidx.fragment.app.Fragment;
++
++import com.naca.maplecrystalcalculator.R;
++import com.naca.maplecrystalcalculator.databinding.BossRecyclerBinding;
++
++public class BossList_Fragment extends Fragment {
++
++    private BossRecyclerBinding binding;
++
++    @Nullable
++    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
++
++        binding = DataBindingUtil.inflate(inflater, R.layout.boss_recyclerview, container, false);
++        View root = binding.getRoot();
++
++
++
++        return root;
++    }
++}
+\ No newline at end of file
+Index: MapleCrystalCalcualtor/app/src/main/res/layout/boss_fragment.xml
+===================================================================
+--- MapleCrystalCalcualtor/app/src/main/res/layout/boss_fragment.xml	(revision 82cba13708632da0a0c38d6c0862ff7413b5248c)
++++ MapleCrystalCalcualtor/app/src/main/res/layout/boss_recyclerview.xml	(date 1610613020799)
+@@ -2,7 +2,7 @@
+ 
+ <layout>
+ 
+-    <data class="BossFragmentBinding">
++    <data class="BossRecyclerBinding">
+ 
+     </data>
+ 
+Index: MapleCrystalCalcualtor/app/src/main/res/layout/calculator_fragment.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- MapleCrystalCalcualtor/app/src/main/res/layout/calculator_fragment.xml	(revision 82cba13708632da0a0c38d6c0862ff7413b5248c)
++++ MapleCrystalCalcualtor/app/src/main/res/layout/calculator_fragment.xml	(date 1610613193217)
+@@ -106,6 +106,7 @@
+             android:background="@color/line">
+ 
+             <FrameLayout
++                android:id="@+id/frame"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:scrollbars="vertical"
