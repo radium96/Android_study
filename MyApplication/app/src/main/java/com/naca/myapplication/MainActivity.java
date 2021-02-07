@@ -4,8 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ObservableArrayList;
 
-import android.content.Context;
+import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.naca.myapplication.databinding.BossMainBinding;
 
@@ -13,10 +14,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,59 +31,68 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-//        getJson();
-//        jsonParsing(json);
 
         mAdapter = new BossListAdapter();
         binding.recyclerview.setAdapter(mAdapter);
         binding.setBossList(bossArrayList);
 
-        bossData();
+        getJson();
     }
 
-    private void bossData() {
-        bossArrayList.add(new Boss("banban", "easy", "1", "1"));
-        bossArrayList.add(new Boss("banban", "easy", "1", "1"));
-    }
+    public void getJson() {
+        json = "";
+        AssetManager am = getAssets();
 
-//    public void getJson() {
-//        json = "";
-//
-//        try {
-//            InputStream is = getAssets().open("weekboss.json");
-//            int fileSize = is.available();
-//
-//            byte[] buffer = new byte[fileSize];
-//            is.read(buffer);
-//            is.close();
-//
-//            json = new String(buffer, "UTF-8");
-//
-//        } catch (IOException e){
-//            e.printStackTrace();;
-//        }
-//    }
-//
-//    private void jsonParsing(String json) {
-//        try {
-//            JSONObject jsonObject = new JSONObject(json);
-//
-//            JSONArray bossArray = jsonObject.getJSONArray("boss");
-//
-//            for(int i=0; i<bossArray.length(); i++){
-//                JSONObject bossObject = bossArray.getJSONObject(i);
-//
-//                Boss boss = new Boss();
-//
-//                boss.setBossName(bossObject.getString("boss"));
-//                boss.setDifficulty(bossObject.getJSONArray("difficulty"));
-//                boss.setCount(bossObject.getJSONArray("count"));
-//
-//                bossArrayList.add(boss);
-//            }
-//
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
-//    }
+        try {
+            InputStream is = am.open("json/weekboss.json");
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader reader = new BufferedReader(isr);
+
+            StringBuffer buffer = new StringBuffer();
+            String line = reader.readLine();
+            while (line != null){
+                buffer.append(line+"\n");
+                line = reader.readLine();
+            }
+
+            json = buffer.toString();
+        } catch (IOException e){
+            e.printStackTrace();;
+        }
+
+        try {
+            JSONObject jsonObject = new JSONObject(json);
+
+            JSONArray bossArray = jsonObject.getJSONArray("boss");
+            Log.d("TEST", Integer.toString(bossArray.length()));
+
+            for(int i = 0;i<bossArray.length(); i++) {
+                JSONObject bossObject = bossArray.getJSONObject(i);
+
+                Boss boss = new Boss();
+
+                boss.setBossName(bossObject.getString("name"));
+
+                JSONArray diffArray = bossObject.getJSONArray("difficulty");
+                ArrayList<String> diffArr = new ArrayList<>();
+                for(int j = 0;j<diffArray.length();j++){
+                    diffArr.add(diffArray.get(j).toString());
+                }
+                boss.setDiffArr(diffArr);
+
+                JSONArray countArray = bossObject.getJSONArray("count");
+                ArrayList<String> countArr = new ArrayList<>();
+                for(int j = 0;j<countArray.length();j++){
+                    countArr.add(countArray.get(j).toString());
+                }
+                boss.setCountArr(countArr);
+
+                bossArrayList.add(boss);
+
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
 }

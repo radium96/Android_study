@@ -10,7 +10,7 @@ public class AdapterBindings {
     public static void bindItem(RecyclerView recyclerView, ObservableArrayList<Boss> boss) {
         BossListAdapter adapter = (BossListAdapter)recyclerView.getAdapter();
         if(adapter != null){
-            adapter.setTItem(boss);
+            adapter.setItem(boss);
         }
     }
 }

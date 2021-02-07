@@ -4,103 +4,93 @@ import android.widget.ImageView;
 
 import androidx.databinding.BindingAdapter;
 import androidx.databinding.ObservableArrayList;
+import androidx.lifecycle.MutableLiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Boss {
 
 //    private ImageView image;
-    private String bossName;
-    private String difficulty;
-    private String count;
-    private String peopleNum;
+    private MutableLiveData<String> bossName = new MutableLiveData<>();
+    private MutableLiveData<String> difficulty = new MutableLiveData<>();
+    private MutableLiveData<String> count = new MutableLiveData<>();
+    private MutableLiveData<String> peopleNum = new MutableLiveData<>();
+
+    private MutableLiveData<ArrayList<String>> diffArr = new MutableLiveData<>();
+    private MutableLiveData<ArrayList<String>> countArr = new MutableLiveData<>();
+
 
     public Boss(){
     }
 
     public Boss(String bossName){
-        this.bossName = bossName;
+        this.bossName.setValue(bossName);
     }
 
     public Boss(String bossName, String difficulty, String count){
-        this.bossName = bossName;
-        this.difficulty = difficulty;
-        this.count = count;
+        this.bossName.setValue(bossName);
+        this.difficulty.setValue(difficulty);
+        this.count.setValue(count);
     }
 
     public Boss(String bossName, String difficulty, String count, String peopleNum){
-        this.bossName = bossName;
-        this.difficulty = difficulty;
-        this.count = count;
-        this.peopleNum = peopleNum;
+        this.bossName.setValue(bossName);
+        this.difficulty.setValue(difficulty);
+        this.count.setValue(count);
+        this.peopleNum.setValue(peopleNum);
     }
 
-//    public ImageView getImage() {
-//        return image;
-//    }
-//
-//    public void setImage(ImageView image) {
-//        this.image = image;
-//    }
-
     public String getBossName() {
-        return bossName;
+        return bossName.getValue();
     }
 
     public void setBossName(String bossName) {
-        this.bossName = bossName;
+        this.bossName.setValue(bossName);
     }
 
     public String getDifficulty() {
-        return difficulty;
+        return difficulty.getValue();
     }
 
     public void setDifficulty(String difficulty) {
-        this.difficulty = difficulty;
+        this.difficulty.setValue(difficulty);
     }
 
     public String getCount() {
-        return count;
+        return count.getValue();
     }
 
     public void setCount(String count) {
-        this.count = count;
+        this.count.setValue(count);
     }
 
     public String getPeopleNum() {
-        return peopleNum;
+        return peopleNum.getValue();
     }
 
     public void setPeopleNum(String peopleNum) {
-        this.peopleNum = peopleNum;
+        this.peopleNum.setValue(peopleNum);
     }
 
-    //    public ArrayList<String> getDifficulty() {
-//        return difficulty;
-//    }
-//
-//    public void setDifficulty(JSONArray difficulty) throws JSONException {
-//        for (int i = 0;i<difficulty.length();i++){
-//            JSONObject temp = difficulty.getJSONObject(i);
-//            this.difficulty.add(temp.toString());
-//        }
-//    }
-//
-//    public ArrayList<Integer> getCount() {
-//        return count;
-//    }
-//
-//    public void setCount(JSONArray count) throws JSONException {
-//        for (int i = 0;i<count.length();i++){
-//            JSONObject temp = count.getJSONObject(i);
-//            this.count.add(Integer.parseInt(temp.toString()));
-//        }
-//    }
+    public ArrayList<String> getDiffArr() {
+        return diffArr.getValue();
+    }
 
+    public void setDiffArr(ArrayList<String> diffArr) {
+        this.diffArr.setValue(diffArr);
+    }
 
+    public ArrayList<String> getCountArr() {
+        return countArr.getValue();
+    }
+
+    public void setCountArr(ArrayList<String> countArr) {
+        this.countArr.setValue(countArr);
+    }
 }

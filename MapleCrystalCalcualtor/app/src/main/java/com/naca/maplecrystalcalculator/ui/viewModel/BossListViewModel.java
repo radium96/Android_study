@@ -68,7 +68,7 @@ public class BossListViewModel extends ViewModel {
 
                 Boss boss = new Boss();
 
-                boss.setBossName(bossObject.getString("boss"));
+                boss.setBossName(bossObject.getString("name"));
                 boss.setDifficulty(bossObject.getJSONArray("difficulty"));
                 boss.setCount(bossObject.getJSONArray("count"));
 
