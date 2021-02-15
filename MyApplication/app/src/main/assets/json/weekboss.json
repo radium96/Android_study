@@ -1,109 +1,109 @@
 {
   "boss": [
     {
-      "image" : "zakum.png",
+      "image" : "@drawable/zakum",
       "name": "자쿰",
       "difficulty": ["선택", "카오스"],
       "count": ["0", "1"]
     },
     {
-      "image" : "magnus.png",
+      "image" : "@drawable/magnus",
       "name": "매그너스",
       "difficulty": ["선택", "하드"],
       "count": ["0", "1", "2"]
     },
     {
-      "image" : "hilla.png",
+      "image" : "@drawable/hilla",
       "name": "힐라",
       "difficulty": ["선택", "하드"],
       "count": ["0", "1"]
     },
     {
-      "image" : "papulatus.png",
+      "image" : "@drawable/papulatus",
       "name": "파풀라투스",
       "difficulty": ["선택", "카오스"],
       "count": ["0", "1"]
     },
     {
-      "image" : "pierre.png",
+      "image" : "@drawable/pierre",
       "name": "피에르",
       "difficulty": ["선택", "카오스"],
       "count": ["0", "1", "2"]
     },
     {
-      "image" : "banban.png",
+      "image" : "@drawable/banban",
       "name": "반반",
       "difficulty": ["선택", "카오스"],
       "count": ["0", "1", "2"]
     },
     {
-      "image" : "bloodyqueen.png",
+      "image" : "@drawable/bloodyqueen",
       "name": "블러디퀸",
       "difficulty": ["선택", "카오스"],
       "count": ["0", "1", "2"]
     },
     {
-      "image" : "vellum.png",
+      "image" : "@drawable/vellum",
       "name": "벨룸",
       "difficulty": ["선택", "카오스"],
       "count": ["0", "1", "2"]
     },
     {
-      "image" : "pinkbean.png",
+      "image" : "@drawable/pinkbean",
       "name": "핑크빈",
       "difficulty": ["선택", "카오스"],
       "count": ["0", "1"]
     },
     {
-      "image" : "cygnus.png",
+      "image" : "@drawable/cygnus",
       "name": "시그너스",
       "difficulty": ["선택", "이지", "하드"],
       "count": ["0", "1", "2"]
     },
     {
-      "image" : "swoo.png",
+      "image" : "@drawable/swoo",
       "name": "스우",
       "difficulty": ["선택", "노말", "하드"],
       "count": ["0", "1"]
     },
     {
-      "image" : "demien.png",
+      "image" : "@drawable/demien",
       "name": "데미안",
       "difficulty": ["선택", "노말", "하드"],
       "count": ["0", "1"]
     },
     {
-      "image" : "lucid.png",
+      "image" : "@drawable/lucid",
       "name": "루시드",
       "difficulty": ["선택", "이지", "노말", "하드"],
       "count": ["0", "1"]
     },
     {
-      "image" : "will.png",
+      "image" : "@drawable/will",
       "name": "윌",
       "difficulty": ["선택", "노말", "하드"],
       "count": ["0", "1"]
     },
     {
-      "image" : "dusk.png",
+      "image" : "@drawable/dusk",
       "name": "더스크",
       "difficulty": ["선택", "노말", "카오스"],
       "count": ["0", "1"]
     },
     {
-      "image" : "djunkel.png",
+      "image" : "@drawable/djunkel",
       "name": "듄켈",
       "difficulty": ["선택", "노말", "하드"],
       "count": ["0", "1"]
     },
     {
-      "image" : "jinhilla.png",
+      "image" : "@drawable/jinhilla",
       "name": "진힐라",
       "difficulty": ["선택", "하드"],
       "count": ["0", "1"]
     },
     {
-      "image" : "blackmage.png",
+      "image" : "@drawable/blackmage",
       "name": "검은 마법사",
       "difficulty": ["선택", "하드"],
       "count": ["0", "1"]

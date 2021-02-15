@@ -4,10 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ObservableArrayList;
 
+import android.content.Context;
 import android.content.res.AssetManager;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.Resource;
 import com.naca.myapplication.databinding.BossMainBinding;
 
 import org.json.JSONArray;
@@ -26,11 +35,13 @@ public class MainActivity extends AppCompatActivity {
     private BossListAdapter mAdapter;
     private String json;
     private ObservableArrayList<Boss> bossArrayList = new ObservableArrayList<>();
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        context = getApplicationContext();
 
         mAdapter = new BossListAdapter();
         binding.recyclerview.setAdapter(mAdapter);
@@ -71,6 +82,12 @@ public class MainActivity extends AppCompatActivity {
 
                 Boss boss = new Boss();
 
+                Resources resources = context.getResources();
+                String imageName = bossObject.getString("image");
+                final int imageId = resources.getIdentifier(imageName, "drawable", context.getPackageName());
+                Log.d("TEST1", Integer.toString(imageId));
+                boss.setImage(imageId);
+
                 boss.setBossName(bossObject.getString("name"));
 
                 JSONArray diffArray = bossObject.getJSONArray("difficulty");
@@ -95,4 +112,5 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 }

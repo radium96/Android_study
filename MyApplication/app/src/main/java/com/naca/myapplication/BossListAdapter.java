@@ -100,6 +100,7 @@ public class BossListAdapter extends RecyclerView.Adapter<BossListAdapter.Bindin
                         public void onClick(DialogInterface dialog, int position) {
                             String onclick = peopleNumItems[position].toString();
                             bossList.get(pos).setPeopleNum(onclick);
+                            binding.peoplenum.setText(onclick);
                         }
                     });
                     peopleNumBuilder.show();
@@ -117,7 +118,7 @@ public class BossListAdapter extends RecyclerView.Adapter<BossListAdapter.Bindin
                         public void onClick(DialogInterface dialog, int position) {
                             String onclick = diffItems[position].toString();
                             bossList.get(pos).setDifficulty(onclick);
-                            Log.d("TEST", onclick);
+                            binding.difficulty.setText(onclick);
                         }
                     });
                     diffBuilder.show();
@@ -136,7 +137,7 @@ public class BossListAdapter extends RecyclerView.Adapter<BossListAdapter.Bindin
                         public void onClick(DialogInterface dialog, int position) {
                             String onclick = countItems[position].toString();
                             bossList.get(pos).setCount(onclick);
-                            Log.d("TEST", onclick);
+                            binding.count.setText(onclick);
                         }
                     });
                     countBuilder.show();

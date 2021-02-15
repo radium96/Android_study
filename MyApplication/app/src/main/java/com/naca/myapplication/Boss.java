@@ -1,5 +1,6 @@
 package com.naca.myapplication;
 
+import android.graphics.Bitmap;
 import android.widget.ImageView;
 
 import androidx.databinding.BindingAdapter;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 
 public class Boss {
 
-//    private ImageView image;
+    private MutableLiveData<Integer> image = new MutableLiveData<>();
     private MutableLiveData<String> bossName = new MutableLiveData<>();
     private MutableLiveData<String> difficulty = new MutableLiveData<>();
     private MutableLiveData<String> count = new MutableLiveData<>();
@@ -44,6 +45,14 @@ public class Boss {
         this.difficulty.setValue(difficulty);
         this.count.setValue(count);
         this.peopleNum.setValue(peopleNum);
+    }
+
+    public int getImage() {
+        return image.getValue();
+    }
+
+    public void setImage(int image) {
+        this.image.setValue(image);
     }
 
     public String getBossName() {
