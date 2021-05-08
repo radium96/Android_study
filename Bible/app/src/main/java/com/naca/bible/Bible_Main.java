@@ -1,8 +1,6 @@
 package com.naca.bible;
 
-import android.app.FragmentManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -13,12 +11,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.naca.bible.databinding.BibleMainBinding;
 import com.naca.bible.ui.viewModel.BibleViewModel;
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Bible_Main extends AppCompatActivity {
 

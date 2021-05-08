@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,9 +7,9 @@
     <data class="BibleMainBinding">
         <variable
             name="viewmodel"
-            type="com.naca.bible.ui.viewModel.BibleViewModel" />
-    </data>
+            type="com.naca.newbible.ui.viewModel.BibleMainViewModel" />
 
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,22 +17,34 @@
         android:orientation="vertical"
         android:background="@color/main_background">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="성경"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="@color/black"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:orientation="horizontal"
             android:weightSum="1">
 
             <Button
-                android:id="@+id/bible_old"
-                android:layout_width="1dp"
-                android:layout_height="100dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 android:text="구약"
-                android:textSize="50dp"
+                android:textSize="40dp"
                 android:textColor="@color/black"
-                android:background="@drawable/btn_bible"
-                android:onClick="@{()->viewmodel.onClickOld()}"/>
+                android:background="@drawable/btn_bible"/>
 
             <View
                 android:layout_width="1dp"
@@ -41,15 +52,13 @@
                 android:background="@color/black"/>
 
             <Button
-                android:id="@+id/bible_new"
-                android:layout_width="1dp"
-                android:layout_height="100dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 android:text="신약"
-                android:textSize="50dp"
+                android:textSize="40dp"
                 android:textColor="@color/black"
-                android:background="@drawable/btn_bible"
-                android:onClick="@{()->viewmodel.onClickNew()}"/>
+                android:background="@drawable/btn_bible"/>
 
         </LinearLayout>
 
@@ -59,11 +68,10 @@
             android:background="@color/black"/>
 
         <FrameLayout
-            android:id="@+id/frame"
+            android:id="@+id/bible_frame"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"/>
 
-        </FrameLayout>
 
     </LinearLayout>
 

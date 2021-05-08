@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="AppMainBinding">
+        <variable
+            name="viewmodel"
+            type="com.naca.newbible.ui.viewModel.AppMainViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/main_background">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:src="@drawable/ic_launcher_background"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/bible"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_margin="5dp"
+                android:clickable="true"/>
+
+            <ImageView
+                android:id="@+id/hymn"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_margin="5dp"
+                android:clickable="true"/>
+
+            <ImageView
+                android:id="@+id/christianity"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_margin="5dp"
+                android:clickable="true"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>
