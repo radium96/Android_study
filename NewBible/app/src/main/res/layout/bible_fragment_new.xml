@@ -4,7 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data class="BibleFragmentNew">
+    <data class="FragmentNewBinding">
+        <variable
+            name="viewmodel"
+            type="com.naca.newbible.ui.viewModel.BibleFragmentNewViewModel" />
 
     </data>
 
@@ -15,7 +18,7 @@
         android:background="@color/main_background">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/bible_fragment_new"
+            android:id="@+id/bible_recycler_new"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="vertical"/>

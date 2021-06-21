@@ -38,6 +38,7 @@
             android:weightSum="1">
 
             <Button
+                android:id="@+id/button_old"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
@@ -52,6 +53,7 @@
                 android:background="@color/black"/>
 
             <Button
+                android:id="@+id/button_new"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"

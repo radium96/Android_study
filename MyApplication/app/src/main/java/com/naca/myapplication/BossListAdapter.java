@@ -24,11 +24,6 @@ public class BossListAdapter extends RecyclerView.Adapter<BossListAdapter.Bindin
 
     private List<Boss> bossList;
     private Context mContext;
-    public static OnItemClickListener mListener = null;
-
-    public interface OnItemClickListener {
-        void onItemClick(View v, int position);
-    }
 
     public BossListAdapter(){
         this.bossList = new ArrayList<>();

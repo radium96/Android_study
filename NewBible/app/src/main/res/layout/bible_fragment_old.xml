@@ -5,6 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data class="FragmentOldBinding">
+        <variable
+            name="viewmodel"
+            type="com.naca.newbible.ui.viewModel.BibleFragmentOldViewModel" />
 
     </data>
 
@@ -15,7 +18,7 @@
         android:background="@color/main_background">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/bible_fragment_old"
+            android:id="@+id/bible_recycler_old"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="vertical"/>

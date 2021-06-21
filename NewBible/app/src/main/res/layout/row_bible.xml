@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data class="RowBibleBinding">
+        <variable
+            name="viewmodel"
+            type="com.naca.newbible.ui.viewModel.BibleRowViewModel" />
+        <variable
+            name="bible"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/textView_bible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{bible}"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:padding="5dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#5A5E5A"/>
+    </LinearLayout>
+
+</layout>
+
