@@ -3,14 +3,12 @@ package com.naca.newbible.ui.view;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.databinding.BindingAdapter;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -27,7 +25,6 @@ import java.io.InputStream;
 
 public class BibleFragmentOld extends Fragment {
 
-    private RecyclerView bible_recycler_old;
     private BibleFragmentOldViewModel viewModel;
     private RecyclerView.LayoutManager layoutManager;
     private BibleListAdapter mAdapter;
@@ -40,7 +37,6 @@ public class BibleFragmentOld extends Fragment {
         super.onCreateView(inflater, container, savedInstanceState);
         FragmentOldBinding binding = DataBindingUtil.inflate(inflater, R.layout.bible_fragment_old, container, false);
         binding.setLifecycleOwner(this);
-
         viewModel = new ViewModelProvider(this).get(BibleFragmentOldViewModel.class);
 
         View view = binding.getRoot();

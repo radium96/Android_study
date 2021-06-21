@@ -42,8 +42,7 @@ public class BibleMain extends AppCompatActivity {
         transaction = fragmentManager.beginTransaction();
         transaction.replace(binding.bibleFrame.getId(), bibleFragmentOld).commitAllowingStateLoss();
 
-        buttonOld = binding.buttonOld;
-        buttonOld.setOnClickListener(new View.OnClickListener() {
+        binding.buttonOld.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 transaction = fragmentManager.beginTransaction();
@@ -51,8 +50,7 @@ public class BibleMain extends AppCompatActivity {
             }
         });
 
-        buttonNew = binding.buttonNew;
-        buttonNew.setOnClickListener(new View.OnClickListener() {
+        binding.buttonNew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 transaction = fragmentManager.beginTransaction();

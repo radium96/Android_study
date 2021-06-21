@@ -22,7 +22,8 @@
             android:text="text"
             android:textStyle="bold"
             android:textSize="30dp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:background="@color/main_top"/>
 
         <View
             android:layout_width="match_parent"

@@ -10,18 +10,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.naca.newbible.databinding.RowBibleBinding;
 
-public class BibleListAdapter extends RecyclerView.Adapter<BibleListAdapter.BindingViewHolder> {
+import java.util.LinkedList;
 
-    private String[] chapterSet;
+public class VerseListAdapter extends RecyclerView.Adapter<VerseListAdapter.BindingViewHolder> {
 
-    public interface OnItemClickListener {
-        void onItemClick(View v, int position);
-    }
+    private LinkedList<String> verseSet;
 
-    public static OnItemClickListener mListener = null;
-
-    public BibleListAdapter(String[] chapterSet) {
-        this.chapterSet = chapterSet;
+    public VerseListAdapter(LinkedList<String> verseSet) {
+        this.verseSet = verseSet;
     }
 
     @NonNull
@@ -33,16 +29,12 @@ public class BibleListAdapter extends RecyclerView.Adapter<BibleListAdapter.Bind
 
     @Override
     public void onBindViewHolder(@NonNull BindingViewHolder holder, int position) {
-        holder.bind(chapterSet[position]);
+        holder.bind(verseSet.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return chapterSet.length;
-    }
-
-    public void setOnItemClickListener(OnItemClickListener listener){
-        this.mListener = listener;
+        return verseSet.size();
     }
 
     public class BindingViewHolder extends RecyclerView.ViewHolder{
@@ -52,17 +44,6 @@ public class BibleListAdapter extends RecyclerView.Adapter<BibleListAdapter.Bind
         public BindingViewHolder(@NonNull RowBibleBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
-            binding.getRoot().setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int position = getBindingAdapterPosition();
-                    if(position != RecyclerView.NO_POSITION){
-                        if (BibleListAdapter.mListener != null){
-                            BibleListAdapter.mListener.onItemClick(v, position);
-                        }
-                    }
-                }
-            });
         }
 
         public void bind(String bible) {

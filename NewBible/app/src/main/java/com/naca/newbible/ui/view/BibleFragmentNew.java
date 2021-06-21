@@ -17,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.naca.newbible.R;
 import com.naca.newbible.databinding.FragmentNewBinding;
-import com.naca.newbible.databinding.FragmentOldBinding;
 import com.naca.newbible.ui.adapter.BibleListAdapter;
 import com.naca.newbible.ui.viewModel.BibleFragmentNewViewModel;
 
@@ -26,7 +25,6 @@ import java.io.InputStream;
 
 public class BibleFragmentNew extends Fragment {
 
-    private RecyclerView bible_recycler_new;
     private BibleFragmentNewViewModel viewModel;
     private RecyclerView.LayoutManager layoutManager;
     private BibleListAdapter mAdapter;

@@ -1,6 +1,5 @@
 package com.naca.newbible.ui.adapter;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,6 @@ import androidx.databinding.library.baseAdapters.BR;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.naca.newbible.databinding.ElementChapterBinding;
-import com.naca.newbible.databinding.RowBibleBinding;
 
 public class ChapterGridAdapter extends RecyclerView.Adapter<ChapterGridAdapter.BindingViewHolder> {
 

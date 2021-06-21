@@ -3,6 +3,7 @@ package com.naca.newbible.ui.view;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -19,7 +20,6 @@ import java.io.InputStream;
 public class ChapterMain extends AppCompatActivity {
 
     private ChapterMainBinding binding;
-    private RecyclerView chapter_recyclerview;
     private RecyclerView.LayoutManager layoutManager;
     private ChapterGridAdapter mAdapter;
 
@@ -74,14 +74,16 @@ public class ChapterMain extends AppCompatActivity {
         binding.bibleName.setText(chapterName);
         mAdapter = new ChapterGridAdapter(chapter);
         binding.chapterRecyclerView.setAdapter(mAdapter);
-//
-//
-//        binding.bible.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(getBaseContext(), BibleMain.class);
-//                startActivity(intent);
-//            }
-//        });
+        mAdapter.setOnItemClickListener(new ChapterGridAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+                Intent intent = new Intent(ChapterMain.this, VerseMain.class);
+                intent.putExtra("path", path);
+                intent.putExtra("verse", position);
+                intent.putExtra("chapter", chapters[pos]);
+                intent.putExtra("numVerse", chapter.length);
+                startActivity(intent);
+            }
+        });
     }
 }

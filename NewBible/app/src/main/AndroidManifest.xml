@@ -22,6 +22,9 @@
 
         <activity android:name=".ui.view.ChapterMain">
         </activity>
+
+        <activity android:name=".ui.view.VerseMain">
+        </activity>
     </application>
 
 </manifest>
